@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+printf("Right half paramid: ");
+    printf("*\n");
+    printf("**\n");
+    printf("***\n");
+    printf("****\n");
+    printf("*****\n");
+    printf("Reverse Right half paramid: ");
+    printf("\n");
+    printf("*****\n");
+    printf("****\n");
+    printf("***\n");
+    printf("**\n");
+    printf("*\n");
+
+
+printf("left half paramid: \n");
+
+    printf("    *\n");
+    printf("   **\n");
+    printf("  ***\n");
+    printf(" ****\n");
+    printf("*****\n");
+
+    return 0;
+}

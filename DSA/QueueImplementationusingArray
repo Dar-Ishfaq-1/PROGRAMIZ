@@ -1,0 +1,57 @@
+#include <stdio.h>
+#define MAX 5  // Maximum size of the queue
+
+int queue[MAX];
+int front = -1, rear = -1;
+
+// Enqueue operation: Insert element into the queue
+void enqueue(int value) {
+    if (rear == MAX - 1) {
+        printf("Queue overflow\n");
+    } else {
+        if (front == -1) {
+            front = 0;
+        }
+        rear++;
+        queue[rear] = value;
+        printf("%d enqueued to queue\n", value);
+    }
+}
+
+// Dequeue operation: Remove the front element
+int dequeue() {
+    if (front == -1 || front > rear) {
+        printf("Queue underflow\n");
+        return -1;
+    } else {
+        int value = queue[front];
+        front++;
+        return value;
+    }
+}
+
+// Display all elements of the queue
+void display() {
+    if (front == -1 || front > rear) {
+        printf("Queue is empty\n");
+    } else {
+        printf("Queue elements: ");
+        for (int i = front; i <= rear; i++) {
+            printf("%d ", queue[i]);
+        }
+        printf("\n");
+    }
+}
+
+// Main function
+int main() {
+    enqueue(10);
+    enqueue(20);
+    enqueue(30);
+    display();  // Output: 10 20 30
+
+    printf("%d dequeued from queue\n", dequeue());  // Output: 10 dequeued
+    display();  // Output: 20 30
+
+    return 0;
+}

@@ -1,0 +1,6 @@
+#ifndef ARRAY_SIZE_H_INCLUDED
+#define ARRAY_SIZE_H_INCLUDED
+
+
+
+#endif // ARRAY_SIZE_H_INCLUDED
